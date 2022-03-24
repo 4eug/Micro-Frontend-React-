@@ -14,6 +14,12 @@ export default function HomeContent() {
       {products.map((product) => (
         <div key={product.id}>
           <img src={product.image} alt={product.name} />
+          <div className="flex">
+            <div className="flex-grow font-bold">
+              <a>{product.name}</a>
+            </div>
+            <div className="flex-end">{currency.format(product.price)}</div>
+          </div>
         </div>
       ))}
     </div>
