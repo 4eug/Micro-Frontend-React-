@@ -9,7 +9,7 @@ import Footer from "./Footer";
 const App = () => (
   <div className=" text-3xl mx-auto max-w-6xl">
     <Header />
-    <div className="my-10">Home Page Content</div>
+    <div className="my-10"></div>
     <Footer />
   </div>
 );
