@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+// import { useParams } from "react-router-dom";
 import { getProductById, currency } from "home/products";
 
 export default function PDPContent() {
@@ -23,11 +23,15 @@ export default function PDPContent() {
       <div>
         <img src={product.image} alt={product.name} />
       </div>
-      <div className="flex">
-        <h1 className="font-bold text-3xl flex-grow">{product.name}</h1>
-        <div className="font-bold text-3xl flex-end">
-          {currency.format(product.price)}
+      <div>
+        <div className="flex">
+          <h1 className="font-bold text-3xl flex-grow">{product.name}</h1>
+          <div className="font-bold text-3xl flex-end">
+            {currency.format(product.price)}
+          </div>
         </div>
+        <div className="mt-10">{product.description}</div>
+        <div className="mt-10">{product.longDescription}</div>
       </div>
     </div>
   );
